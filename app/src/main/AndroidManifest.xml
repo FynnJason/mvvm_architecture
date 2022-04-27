@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fynnjason.mvvmarchitecture"
+    tools:ignore="ScopedStorage">
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- SD卡存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 适配Android 11相机 -->
+    <queries package="${applicationId}">
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"></action>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE"></action>
+        </intent>
+    </queries>
+
+    <application
+        android:name=".app.MVVMApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MVVMArchitecture"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.simple7.Simple7Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.simple6.Simple6Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.simple5.Simple5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.simple4.Simple4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.simple3.Simple3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.simple2.Simple2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.simple1.Simple1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" />
+    </application>
+
+</manifest>

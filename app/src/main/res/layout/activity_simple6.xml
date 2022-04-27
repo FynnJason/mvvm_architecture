@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fynnjason.mvvmarchitecture.ui.simple6.Simple6ViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_single_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单选拍照" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_single_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单选相册" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_simple6"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_simple6"
+            android:paddingHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

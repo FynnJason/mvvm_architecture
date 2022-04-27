@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.fynnjason.mvvmarchitecture.ui.simple4.Simple4ViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_bottom" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/layout_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@{vm.position ==0 ? @drawable/ic_simple4_home_selected : @drawable/ic_simple4_home_normal}" />
+
+                <TextView
+                    android:textColor="@{vm.position ==0 ? @color/colorED7B2D : @color/color1C1C1C}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="首页"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_travel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@{vm.position ==1 ? @drawable/ic_simple4_travel_selected : @drawable/ic_simple4_travel_normal}"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+
+                <TextView
+                    android:textColor="@{vm.position ==1 ? @color/colorED7B2D : @color/color1C1C1C}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="出行"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_live"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@{vm.position ==2 ? @drawable/ic_simple4_live_selected : @drawable/ic_simple4_live_normal}"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+
+                <TextView
+                    android:textColor="@{vm.position ==2 ? @color/colorED7B2D : @color/color1C1C1C}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="生活"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@{vm.position ==3 ? @drawable/ic_simple4_mine_selected : @drawable/ic_simple4_mine_normal}"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+
+                <TextView
+                    android:textColor="@{vm.position ==3 ? @color/colorED7B2D : @color/color1C1C1C}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="我的"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
