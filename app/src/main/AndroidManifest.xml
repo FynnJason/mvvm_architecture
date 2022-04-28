@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fynnjason.mvvmarchitecture"
     tools:ignore="ScopedStorage">
-    <!-- 网络权限 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 相机权限 -->
-    <uses-permission android:name="android.permission.CAMERA" /> <!-- SD卡存储 -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 前台服务 -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 适配Android 11相机 -->
-    <queries package="${applicationId}">
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- SD卡读存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- SD卡写存储 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 前台服务 -->
+    <queries package="${applicationId}"> <!-- 适配Android 11相机 -->
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE"></action>
         </intent>
